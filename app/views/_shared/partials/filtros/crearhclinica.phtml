@@ -1,0 +1,24 @@
+
+<fieldset>
+  <legend>Seleccione el Paciente para crear la historia clinica</legend>
+  <ol>
+      <label>Paciente</label>
+          <?php echo Form::dbSelect('hclinica.personas_id', 'apellido'); ?>  
+  </ol>
+</fieldset>
+
+
+<script type='text/javascript'>
+$("#hclinica_personas_id").change(function(){
+	var personas_id 	=	$('#hclinica_personas_id').val();
+        location.href="/<?php echo  'hclinica/create/'?>"+ personas_id;
+//         $.ajax({
+//           type: "POST",
+//           url: "<?php //echo PUBLIC_PATH . 'ctacte/listado/'; ?>",
+//           data: "cliente_id=" + cliente_id,
+//           success: function(html){
+//             $("#div_grilla").html(html);
+//           }
+//         });alert(cliente_id);
+});
+</script>

@@ -1,0 +1,68 @@
+.mimes{
+	
+	border: 0;
+}
+.edit{
+		border: 0;
+	}
+.delete{
+		border: 0;
+	}
+.first{
+		height:	22px;
+		width:	22px;
+		border: 0;
+	}
+.prev{
+		height:	22px;
+		width:	22px;
+		border: 0;
+	}
+.next{
+		height:	22px;
+		width:	22px;
+		border: 0;
+	}
+.last{
+		height:	22px;
+		width:	22px;
+		border: 0;
+	}
+.table_grilla .nav_tools{
+	padding:.5em;
+	border:1px solid #fff;
+	background:#328aa4 url(../../../img/datagrid/tr_back.gif) repeat-x;
+	color:#fff;
+}
+.table_grilla .nav_tools:hover{
+	padding:.5em;
+	border:1px solid #fff;
+	background:#328aa4 url(../../../img/datagrid/tr_back.gif) repeat-x;
+	color:#fff;
+}
+.table_grilla
+{
+	font-family: "Lucida Sans Unicode", "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 33px;
+	width: 94%;
+	text-align: left;
+	border-collapse: collapse;
+}
+.table_grilla th
+{
+	padding: 4px;
+	border:1px solid #fff;
+	color:#000;
+	height: 10px;
+}
+/*#table_forms tr*/
+.table_grilla, td
+{
+	border-bottom: 1px solid #fff;
+}
+.table_grilla tr:hover td
+{
+	background: #99CC66;
+	color: #fff;
+}

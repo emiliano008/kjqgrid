@@ -1,0 +1,66 @@
+ <?php echo Tag::js('jquery/ui/jquery.ui.core'); ?>
+  <?php echo Tag::js('jquery/ui/jquery.ui.widget'); ?>
+    <?php echo Tag::js('jquery/ui/jquery.ui.position'); ?>
+ 	 <?php echo Tag::js('jquery/ui/jquery.ui.autocomplete'); ?>		
+	<style>
+	#doctor-label {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+	#doctor-icon {
+		float: left;
+		height: 32px;
+		width: 32px;
+	}
+	#doctor-description {
+		margin: 0;
+		padding: 0;
+	}
+	</style>
+	
+	
+<script type="text/javascript" >
+    $(document).ready(function(){
+        $( "#doctor" ).autocomplete({
+            minLength : 0 , //le indicamos que busque a partir de haber escrito dos o mas caracteres en el input
+            source : "/doctor/autocomplete", //url donde buscará los estados
+			focus: function( event, ui ) {
+				$( "#doctor" ).val( ui.item.label );
+				return false;
+			},
+			select: function( event, ui ) {
+				$( "#doctor" ).val( ui.item.label );
+				$( "#turno_doctor_id" ).val( ui.item.value );
+				$( "#doctor-description" ).html( ui.item.desc );
+				$( "#doctor-icon" ).attr( "src", "images/" + ui.item.icon );
+ 				location.href="/turno/index/"+ui.item.value;
+				return false;
+			}
+		})
+		.data( "autocomplete" )._renderItem = function( ul, item ) {
+			return $( "<li></li>" )
+				.data( "item.autocomplete", item )
+				.append( "<a>" + item.label + "<br><i>" + item.desc + "</i></a>" )
+				.appendTo( ul );
+		};
+	});
+	
+	</script>
+
+
+
+<div class="demo">
+	<div id="doctor-label">Escriba las primeras letras del nombre del Doctor:</div>
+	<!--<img id="doctor-icon" src="/demos/autocomplete/images/transparent_1x1.png"  class="ui-state-default"//>-->
+	<input id="doctor"/>
+	<input type="hidden" id="turno_doctor_id"/>
+	<p id="doctor-description"></p>
+</div>
+
+
+
+
+
+ 
+

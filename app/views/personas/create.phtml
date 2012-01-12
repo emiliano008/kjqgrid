@@ -1,0 +1,12 @@
+<?php View::content(); ?>
+<h3>Personas<h3>
+
+
+<?php
+ echo Form::open(); // por defecto llama a la misma url ?>
+       <?php // echo Form::text('articulos.rubro_id') ?><br>
+       <?php View::partial('personas/personas', false ) ?>
+       <?php echo Form::submit('Confirmar') ?>
+<?php echo Form::close() ?>
+
+  

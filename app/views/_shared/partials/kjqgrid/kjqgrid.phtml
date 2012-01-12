@@ -1,0 +1,179 @@
+<?php
+/**
+* kjqgrid - KumbiaPHP 
+* PHP version 5
+* LICENSE
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* ERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+* @package Helper
+* @license http://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE version 3.
+* @author Markisich Emiliano <emiliano@markisich.com.ar>
+* @version 0.0.00000001 super alfa 
+*/
+
+	 echo Tag::css('jqGrid-4.1.1/css/ui.jqgrid'); ?>
+	<?php  echo Tag::css('jqGrid-4.1.1/css/ui.multiselect'); ?>
+	<?php echo Tag::js('jquery/jquery-ui-1.8.1.custom.min'); ?>
+	<?php echo Tag::js('jqGrid/plugins/jquery.layout'); ?>
+	<?php echo Tag::js('jqGrid/js/i18n/grid.locale-es'); ?>
+	<?php echo Tag::js('jqGrid/js/jquery.jqGrid.min'); ?>
+	<?php echo Tag::js('jqGrid/plugins/jquery.tablednd'); ?>
+	<?php echo Tag::js('jqGrid/plugins/jquery.contextmenu'); ?>
+	<?php echo Tag::js('jqGrid/plugins/ui.multiselect'); ?>
+	<?php echo Tag::js('jqGrid/plugins/xmlmap'); ?>
+
+  <?php   
+      $model = ''; 
+      $names ='';
+      foreach ($dataGrid->fields as $campo):
+           $names .= '"'.$dataGrid->headers[$campo].'",' ;
+	   $formato = $dataGrid->getformatOption($campo);
+           $key = $dataGrid->getkey($campo);
+           $model .= '{name:"'.$campo.'",index:"'.$campo.'", width:120, xmlmap:"ItemAttributes>'.$campo.'", search:true'.$key . $formato.'},';
+      endforeach; 
+  ?>
+
+  <?php 
+  $datos ="'".'<?xml version="1.0" encoding="UTF-8" ?>' ;
+  $datos .= $dataGrid->xml() ."'";
+  ?>
+
+  <script type="text/javascript">
+   var datos = <?php  echo "$datos"; ?>
+
+   jQuery(document).ready(function(){
+    var lastsel;
+    jQuery("#list").jqGrid({ 
+      //url: "listado", 
+      datastr:datos,
+      datatype: "xmlstring", 
+      colNames:[<?php  echo substr($names, 0,-1);?>], 
+      colModel:[<?php  echo substr($model, 0,-1);?>],
+      height:250, with: 450,
+      loadonce: true, 
+      xmlReader: { root : "Items", row: "Item", repeatitems: false, id: "ASIN" }, 
+      rowNum:15, 
+      rowList:[20,60,100], 
+      //pagination:true,
+      pager:jQuery('#pagered'), //'#pagered', 
+      sortname: 'id', 
+      viewrecords: true, 
+      sortorder: "desc", 
+      caption: "Listado",
+      forceFit : true, 
+      cellEdit: false, 
+      cellsubmit: 'clientArray', 
+      multiselect: true,
+	onSelectRow: function(rowid){
+               lastsel = $('#list').getCell(rowid, 'id');
+	},
+	ondblClickRow: function(rowid){
+               lastsel = $('#list').getCell(rowid, 'id');
+	},
+	//viewsortcols: [true, 'vertical', true],
+	footerrow : true,
+	//userDataOnFooter : true, 
+	altRows : true,
+        groupSummary: true,
+
+       // groupDataSorted: true
+    });
+
+ jQuery("#list").jqGrid('navGrid','#pagered', 
+   {edit:false,add:false,del:false}, 
+   {}, 
+   {}, 
+   {}, 
+   {multipleSearch:false, multipleGroup:false, showQuery: false} );
+
+ jQuery("#list").jqGrid('filterToolbar');
+
+ jQuery("#list").jqGrid('navButtonAdd',"#pagered",{
+   caption:"",
+   buttonicon:'ui-icon-plus', 
+   onClickButton: function(){ 
+         location.href='/<?php echo $dataGrid->url ?>create/';
+   }, 
+   position:"last"
+ });
+ jQuery("#list").jqGrid('navButtonAdd',"#pagered",{
+   caption:"",
+   buttonicon:"ui-icon-pencil", 
+   onClickButton: function(){ 
+// 		var gsr = jQuery("#list").jqGrid('getGridParam','selrow');
+// 		if(gsr){
+// 			jQuery("#list").jqGrid('GridToForm',gsr,"#order");
+// 		} else {
+// 			alert("Seleccione un registro")
+// 		}	
+     if(lastsel){
+                location.href="/<?php echo $dataGrid->url ?>edit/"+lastsel;
+          }else{
+                alert("Seleccione un registro")
+     }
+     
+   }, 
+   position:"last"
+ });
+ jQuery("#list").jqGrid('navButtonAdd',"#pagered",{
+   caption:"",
+   buttonicon:"ui-icon-trash", 
+   onClickButton: function(){ 
+/*		var gsr = jQuery("#list").jqGrid('getGridParam','selrow');
+		if(gsr){
+			jQuery("#list").jqGrid('GridToForm',gsr,"#order");
+		} else {
+			alert("Seleccione un registro")
+		}*/	
+     if(lastsel){
+                 location.href="/<?php echo $dataGrid->url ?>del/"+lastsel;
+          }else{
+                alert("Seleccione un registro")
+     }
+      
+   }, 
+   position:"last"
+ });
+ });
+
+
+ function mysum(val, name, record)
+ {   return parseFloat(val||0) + parseFloat((record[name]||0));
+ }
+
+ function currencyFmatter (cellvalue, options, rowObject)
+ {
+   return "$"+cellvalue;
+ };
+    // $("#list").jqGrid('bindKeys', {"onEnter":function( rowid ) { alert("You enter a row with id:"+rowid)} } );
+ function formatOperations(cellvalue, options, rowObject) {
+      return "<a href='/<?php echo $dataGrid->url ?>edit/" + cellvalue + "' id='ui-icon-trash'><u>Edit</u></a>  "+
+  	       "<a <a href='/<?php echo $dataGrid->headers ?>del/" + cellvalue + "'><u>Edit</u></a>";
+ };
+
+
+
+
+ </script>
+
+  	<div id="grilla" class="ui-layout-west ui-widget ui-widget-content" > 
+        <div>
+  	<table id="list" style="font-family: Arial, Helvetica, Sans-Serif; font-size: 10px;">
+
+	</table>
+	  <div id="pagered" style="height: 40px; font-family: Arial, Helvetica, Sans-Serif; font-size: 10px;"></div> 
+	</div> 
+
+

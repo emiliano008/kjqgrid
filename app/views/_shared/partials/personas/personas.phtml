@@ -1,0 +1,47 @@
+    <div class="campos">
+        <?php echo Form::label('Nombre:', 'nombre') ?>
+        <?php echo Form::text('personas.nombre') ?><br>
+     </div>
+    <div class="campos">
+        <?php echo Form::label('Apellidos:', 'apellido') ?>
+        <?php echo Form::text('personas.apellido') ?><br>
+     </div>
+    <div class="campos">
+        <?php echo Form::label('Teléfono:', 'telefono') ?>
+        <?php echo Form::text('personas.telefono') ?><br>
+     </div>
+    <div class="campos">
+        <?php echo Form::label('Dirección:', 'direccion') ?>
+        <?php echo Form::text('personas.direccion') ?><br>
+     </div>
+    <div class="campos" style="width: 100px;">
+        <?php echo Form::label('Sexo:', 'sexo') ?>
+        <?php echo Form::Select('personas.sexo',array('Masculino'=>'Masculino','Femenino'=>'Femenino'), $attrs = NULL, '-seleccione-'); ?><br>
+     </div>
+    <div class="campos">
+        <?php echo Form::label('Fecha Nacimiento:', 'fechanacimiento') ?>
+        <?php echo Calendar::text('personas.fechanacimiento') ?><br>
+     </div>
+
+   <div class="campos" style="width: 100px;">
+        <?php echo Form::label('Tipo:', 'tipodoc') ?>
+        <?php echo Form::Select('personas.tipodoc',array('DNI'=>'DNI','LE'=>'LE','CI'=>'CI'), $attrs = NULL, '-seleccione-'); ?><br>
+     </div>
+    <div class="campos">
+        <?php echo Form::label('Num Documento:', 'nrodoc') ?>
+        <?php echo Form::text('personas.nrodoc') ?><br>
+     </div>
+
+  <div class="campos">
+        <?php echo Form::label('Obra Social:', 'obrasocial') ?>
+       <?php echo Form::text('personas.obrasocial') ?><br>
+     </div>
+    <div class="campos">
+        <?php echo Form::label('Numero Historia Clinica:', 'nrolegajo') ?>
+        <?php echo Form::text('personas.nrolegajo') ?><br>
+     </div>
+<script type='text/javascript'>
+$(function(){
+    $('#personas_nrolegajo').timepickr();
+});
+</script>

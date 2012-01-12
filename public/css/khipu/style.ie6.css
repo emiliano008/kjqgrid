@@ -1,0 +1,464 @@
+/* begin Page */
+
+/* Generated with Markisich Soluciones Informaticas version 2.3.0.23326, file checksum is FF7DE06B. */
+
+#page-background-glare-image
+{
+	background: none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+GetStyleUrl()+"images/Page-BgGlare.png',sizingMethod='crop')");
+}
+img
+{
+	filter:expression(fixPNG(this));
+}
+/* end Page */
+
+/* begin Box, Sheet */
+.Sheet, .Sheet-body
+{
+	zoom:1;
+}
+
+.Sheet-body
+{
+	position:static;
+}
+
+.Sheet-tr, .Sheet-tl, .Sheet-br, .Sheet-bl, .Sheet-tc, .Sheet-bc,.Sheet-cr, .Sheet-cl
+{
+	font-size: 1px;
+	background: none;
+}
+
+.Sheet-tr, .Sheet-tl, .Sheet-br, .Sheet-bl
+{
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/Sheet-s.png',sizingMethod='scale')");
+}
+
+.Sheet-tl
+{
+	clip: rect(auto 35px 35px auto);
+}
+
+.Sheet-tr
+{
+	left: expression(this.parentNode.offsetWidth-70+'px');
+	clip: rect(auto auto 35px 35px);
+}
+
+.Sheet-bl
+{
+	top: expression(this.parentNode.offsetHeight-70+'px');
+	clip: rect(35px 35px auto auto);
+}
+
+.Sheet-br
+{
+	top: expression(this.parentNode.offsetHeight-70+'px');
+	left: expression(this.parentNode.offsetWidth-70+'px');
+	clip: rect(35px auto auto 35px);
+}
+
+.Sheet-tc, .Sheet-bc
+{
+	width: expression(this.parentNode.offsetWidth-70+'px');
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/Sheet-h.png',sizingMethod='scale')");
+}
+
+.Sheet-tc
+{
+	clip: rect(auto auto 35px auto);
+}
+
+.Sheet-bc
+{
+	top: expression(this.parentNode.offsetHeight-70+'px');
+	clip: rect(35px auto auto auto);
+}
+
+.Sheet-cr, .Sheet-cl
+{
+	height: expression(this.parentNode.offsetHeight-70+'px');
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/Sheet-v.png',sizingMethod='scale')");
+}
+
+.Sheet-cr
+{
+	left: expression(this.parentNode.offsetWidth-70+'px');
+	clip: rect(auto auto auto 35px);
+}
+
+.Sheet-cl
+{
+	clip: rect(auto 35px auto auto);
+}
+
+.Sheet-cc
+{
+	font-size: 1px;
+	width: expression(this.parentNode.offsetWidth-70+'px');
+	height: expression(this.parentNode.offsetHeight-70+'px');
+	background-color: #FFFFFF;
+}
+#page-background-simple-gradient, #page-background-gradient, #page-background-glare
+{
+	width:expression(document.body.clientWidth > 900 ? "100%" : "900px");
+}
+/* end Box, Sheet */
+
+/* begin Header */
+div.Header-png
+{
+	font-size: 1px;
+	background: none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/Header.png',sizingMethod='crop')");
+}
+/* end Header */
+
+/* begin Menu */
+
+.menu ul
+{
+	height: 1%;
+	width:1px;
+}
+
+.menu, .menu ul
+{
+	height: 1%;
+}
+
+.menu li.menuhover
+{
+	z-index: 10000;
+}
+
+.menu .menuhoverUL
+{
+	visibility: visible;
+}
+
+.menu .menuhoverUL
+{
+	top: 100%;
+	left: 0;
+}
+
+.menu .menuhoverUL .menuhoverUL
+{
+	top: 0;
+	left: 100%;
+}
+
+.menu ul a
+{
+	height: 1%;
+}
+
+.menu li li
+{
+	float: left;
+	width: 100%;
+}
+
+.menu .menuhoverUL .menuhoverUL
+{
+	top: 5px;
+	left: 100%;
+}
+
+.menu, .menu ul
+{
+	height: 1%;
+}
+
+.menu li.menuhover
+{
+	z-index: 10000;
+}
+
+.menu .menuhoverUL
+{
+	visibility: visible;
+}
+
+.menu .menuhoverUL
+{
+	top: 100%;
+	left: 0;
+}
+
+.menu .menuhoverUL .menuhoverUL
+{
+	top: 0;
+	left: 100%;
+}
+
+.menu ul a
+{
+	height: 1%;
+}
+
+.menu li li
+{
+	float: left;
+	width: 100%;
+}
+
+.nav
+{
+	zoom: 1;
+}
+
+.nav .l, .nav .r
+{
+	font-size: 1px;
+	background: none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/nav.png',sizingMethod='crop')");
+}
+
+.nav .l
+{
+	width: expression(this.parentNode.offsetWidth-0+'px');
+}
+
+.nav .r
+{
+	left: expression(this.parentNode.offsetWidth-890+'px');
+	clip: rect(auto auto auto 890px);
+}
+
+/* end Menu */
+
+/* begin MenuItem */
+.menu a
+{
+	float:left;
+}
+
+.menu a:hover
+{
+	visibility:visible;
+}
+
+.menu a .r, .menu a .l
+{
+	font-size:1px;
+	background: none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/MenuItem.png',sizingMethod='crop')");
+}
+
+.menu a .r
+{
+	left: expression(this.parentNode.offsetWidth-412+'px');
+	clip: rect(auto auto auto 406px);
+}
+
+.menu a .l
+{
+	width: expression(this.parentNode.offsetWidth-6+'px');
+}
+
+.menuhover .menuhoverA .t
+{
+	color: #F5F5F5;
+}
+
+.menuhover .menuhoverA .l, .menuhover .menuhoverA .r
+{
+	top: -27px;
+}
+/* end MenuItem */
+
+/* begin MenuSeparator */
+.nav .menu-separator
+{
+	font-size: 1px;
+	zoom:1;
+	background: none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/MenuSeparator.png',sizingMethod='crop')");
+}
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+
+.menu ul a
+{
+	color: #2E2E2E !important;
+}
+
+.menu ul a:hover {
+	color: #000000 !important;
+}	
+
+.menu ul .menuhover .menuhoverA
+{
+	color: #000000 !important;
+	border-color: #6E6E6E;
+	background-position: 0 -26px;
+}
+
+.nav .menu ul a:hover span, .nav .menu ul a:hover span span
+{
+	color: #000000 !important;
+}	
+
+.nav .menu ul .menuhover .menuhoverA span, .nav .menu ul .menuhover .menuhoverA span span
+{
+	color: #000000 !important;
+}
+
+/* end MenuSubItem */
+
+/* begin Box, Block */
+.Block, .Block-body
+{
+	zoom:1;
+}
+
+.Block-body
+{
+	position:static;
+}
+/* end Box, Block */
+
+/* begin Box, BlockContent */
+.BlockContent, .BlockContent-body
+{
+	zoom:1;
+}
+
+.BlockContent-body
+{
+	position:static;
+}
+
+.BlockContent-body ul li
+{
+	height:1%;
+	background:none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/BlockContentBullets.png',sizingMethod='crop')");
+}
+
+/* end Box, BlockContent */
+
+/* begin Box, Post */
+.Post, .Post-body
+{
+	zoom:1;
+}
+
+.Post-body
+{
+	position:static;
+}
+/* end Box, Post */
+
+/* begin PostContent */
+h1
+{
+  margin: 0.67em 0;
+}
+
+h2
+{
+  margin: 0.8em 0;
+}
+
+h3
+{
+  margin: 1em 0;
+}
+
+h4
+{
+  margin: 1.25em 0;
+}
+
+h5
+{
+  margin: 1.67em 0;
+}
+
+h6
+{
+  margin: 2.33em 0;
+}
+/* end PostContent */
+
+/* begin PostBullets */
+.Post ul li, .Post ol ul li
+{
+	height:1%;
+	background:none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/PostBullets.png',sizingMethod='crop')");
+}
+
+.Post ul ol li
+{
+	background:none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="");
+}
+/* end PostBullets */
+
+/* begin PostQuote */
+blockquote,
+.PostContent blockquote
+{
+	height:1%;
+	background-image: none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/PostQuote.png',sizingMethod='crop')");
+}
+/* end PostQuote */
+
+/* begin Button */
+.button-wrapper, .button-wrapper .l, .button-wrapper .r
+{
+	font-size: 1px;
+}
+
+.button-wrapper .button
+{
+	float:left;
+}
+
+.button-wrapper .l, .button-wrapper .r
+{
+	background: none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/Button.png',sizingMethod='crop')");
+}
+
+.button-wrapper .r
+{
+	left: expression(this.parentNode.offsetWidth-409+'px');
+	clip: rect(auto auto auto 399px);
+}
+
+.button-wrapper .l
+{
+	width: expression(this.parentNode.offsetWidth-10+'px');
+}
+
+/* end Button */
+
+/* begin Footer */
+.Footer .Footer-background
+{
+	top: expression(this.parentNode.offsetHeight-150+'px');
+	background: none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/Footer.png',sizingMethod='crop')");
+	zoom: 1;
+	font-size:1px;
+}
+
+.rss-tag-icon
+{
+	zoom:1;
+	font-size:1px;
+	background:none;
+	behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + GetStyleUrl()+"images/rssIcon.png',sizingMethod='crop')");
+}
+
+/* end Footer */
+
+

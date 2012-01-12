@@ -1,0 +1,70 @@
+ 
+         <?php echo Tag::css('themes/ui-lightness/ui.timepickr'); ?>
+ <?php echo Tag::js('jquery/ui/jquery.ui.core'); ?>
+  <?php echo Tag::js('jquery/ui/jquery.ui.widget'); ?>
+    <?php echo Tag::js('jquery/ui/jquery.ui.position'); ?>
+ 	 <?php echo Tag::js('jquery/ui/jquery.ui.autocomplete'); ?>
+
+	<style>
+	#persona-label {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+	#persona-icon {
+		float: left;
+		height: 32px;
+		width: 32px;
+	}
+	#persona-description {
+		margin: 0;
+		padding: 0;
+	}
+	</style>
+	
+	
+<script type="text/javascript" >
+    $(document).ready(function(){
+        $( "#persona" ).autocomplete({
+            minLength : 0 , //le indicamos que busque a partir de haber escrito dos o mas caracteres en el input
+            source : "/personas/autocompletepacientes", //url donde buscará los estados
+			focus: function( event, ui ) {
+				$( "#persona" ).val( ui.item.label );
+				return false;
+			},
+			select: function( event, ui ) {
+				$( "#persona" ).val( ui.item.label );
+				$( "#turno_persona_id" ).val( ui.item.value );
+				$( "#persona-description" ).html( ui.item.desc );
+				$( "#persona-icon" ).attr( "src", "images/" + ui.item.icon );
+
+				return false;
+			}
+		})
+		.data( "autocomplete" )._renderItem = function( ul, item ) {
+			return $( "<li></li>" )
+				.data( "item.autocomplete", item )
+				.append( "<a>" + item.label + "<br><i>" + item.desc + "</i></a>" )
+				.appendTo( ul );
+		}; 
+		$('#turno_time').timepickr();
+	});
+	
+</script>
+     
+
+
+
+
+<div class="demo">
+	<div id="persona-label">Escriba las primeras letras del nombre del paciente:</div>
+	<!--<img id="persona-icon" src="/demos/autocomplete/images/transparent_1x1.png"  class="ui-state-default"//>-->
+	<input id="persona"/>
+	<input type="hidden" id="turno_persona_id"/>
+	<p id="persona-description"></p>
+</div>
+
+
+
+
+

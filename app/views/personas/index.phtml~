@@ -1,0 +1,12 @@
+<?php View::content()?>
+<?php  $dataGrid = new kjqgrid($listPersonas); ?>
+<?php	$dataGrid->fields = array('id' =>  'id','nrolegajo' =>  'nrolegajo','nombre' =>  'nombre', 'apellido' => 'apellido');?>
+<?php	$dataGrid->headers = array('id' =>  'id','nrolegajo' =>  'legajo','nombre' =>  'Nombre', 'apellido' => 'Apellido');?>
+<?php	$dataGrid->typefields = array('id' =>  'integer','nombre' =>  'string', 'apellido' => 'string');?>
+<?php	$dataGrid->setFormatOption('id',',formatter:"currency",formatoptions:{decimalSeparator:",", thousandsSeparator: ",", decimalPlaces: 2, prefix: "$ "}');?>
+<?php	$dataGrid->setkey('id',',key:true');?> 
+<?php	$dataGrid->setkey('nombre',',sorttype:"text"');?> 
+<?php	$dataGrid->setkey('apellido',',sorttype:"string"');?> 
+<?php  echo View::partial('kjqgrid/kjqgrid' ,false,array('dataGrid'=>$dataGrid)); ?>
+
+

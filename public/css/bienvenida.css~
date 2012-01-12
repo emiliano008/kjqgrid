@@ -1,0 +1,228 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+background-color: #fdfdfd;
+font : 8pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+color : #666666;
+margin : 0px 0px 0px 0px;
+text-align: center;
+} 
+
+#contenido{
+text-align: left;
+width: 100%;
+background-color : #ffffff;
+margin: 0; 
+
+}
+
+#head {
+    height: 53px;
+    background-color: #CCCC99;
+    background: #D1C2A3 url(../img/default/head.png) no-repeat scroll left;
+}
+#head h1 {
+    font-size: 30px;
+    padding: 10px 8px 0px;
+    margin: 0;
+    color: #fff;
+    float: left; 
+}
+
+#menuizq{
+  width: 20%;
+    float:left; 
+    margin: 5px;
+}
+
+#principal{
+    background-color: #aaafff;
+    padding: 0 0 0 0px;
+    margin: 0 0 0 0px;
+    width: 100%; 
+    float: left; 
+}
+
+#cuerpo{
+    background-color: #aaafff;
+    padding: 0 0 0 0px;
+    width: 70%; 
+    float: right; 
+}
+
+
+#head #info-app {
+    font-size: 20px;
+    padding: 20px 0px 15px;
+    margin: 0;
+    float: left;
+    color: #fff;
+}
+
+#footer {
+    background-color: #8A6F5C;
+    border-top: 4px solid #555555;
+    text-align:left;
+    clear: both; 
+}
+
+#footer a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+}
+#footer a:hover {
+    color: #000;
+}
+#footer p{
+    font-size: 14px;
+    color: #d1a88b;
+}
+#footer ul.links {
+    text-align: center;
+    list-style: none inside;
+    padding: 0;
+}
+#footer ul.links li {
+    display: inline;
+    color: #D1A88B;
+}
+
+#logo-kumbia {
+    margin-right: auto;
+    margin-top: 40px;
+    display: block;
+    margin-left: 100px;
+    width: 160px;
+}
+#info{
+    background-color: #f8f8f8;
+    margin: 20px 20px 30px 100px;
+    border:1px solid #E5E5E5;
+    padding: 2em;
+    clear: both;
+}
+#info h1 {
+    font-size: 1.5em;
+    color: #333333;
+    margin: 0;
+    text-align: center
+}
+#info h2 {
+    font-size: 1.5em;
+    color: #333333;
+    margin: 0;
+}
+#info p,li {
+    color: #333333;
+    font-size: 15px;
+}
+#info ul{
+    margin-left: 40px;  
+}
+
+.app {
+    font-size: 30px;
+    margin: 0;
+    color: #8A6F5C;
+}
+.title {
+    font-size: 30px;
+    margin: 0;
+    color: #333333;
+}
+
+#config a {
+    background-color: #8A6F5C;
+    padding: .2em;
+    color: #fff;
+    text-decoration: none;
+}
+#config a:hover {
+    background-color: #000;
+}
+
+.alignright #config {
+    font-size: 20px;
+    margin: 15px 20px;
+    color: #fff;
+}
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+#conf {
+margin-top: 1em;
+}
+h4 {
+font-size: small;
+margin-top: 1em;
+}
+h4 span {
+
+color: #8A6F5C;
+}
+#conf p {
+color: #15428b;
+}
+
+.campos {
+ text-align:left;
+ display:block;
+ padding-left:40px;
+ padding-right:20px;
+ width:auto;
+}
+
+.submenu {
+ text-align:left;
+ display:block;
+ padding-left:20px;
+ padding-right:20px;
+ width:auto;
+ float: left;
+ margin: 5px;
+ color: #333333;
+ font-size: 15px;
+}
+
+.campos {
+  margin: 5px;
+}
+
+#debe{
+  width: 30%;
+    float:left; 
+    margin: 5px;
+}
+
+#haber{
+  width: 30%;
+    float:left; 
+    margin: 5px;    
+}
+
+#saldo{
+  width: 20%;
+    float:left; 
+    margin: 5px;   
+}
+
+.pagos{
+  width: 400px;
+  margin: 5px;   
+  font-size: 14pt;
+  color: green;
+  
+}
+#content{
+  border: 4;
+}

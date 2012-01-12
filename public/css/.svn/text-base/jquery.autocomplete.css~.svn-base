@@ -1,0 +1,1547 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var logged_in_user_email = null;
+ 
+ 
+ var relative_base_url = "";
+ 
+ </script>
+ 
+ 
+ <title>jquery.autocomplete.css - 
+ allforgood -
+ 
+ Project Hosting on Google Code</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/8653308036866339325/css/ph_core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/8653308036866339325/css/ph_detail.css" >
+ 
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/8653308036866339325/css/d_sb_20080522.css" >
+ 
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/8653308036866339325/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ </style>
+</head>
+<body class="t4">
+ <script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ </script>
+ <div id="gaia">
+ 
+ <span>
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=http%3A%2F%2Fcode.google.com%2Fp%2Fallforgood%2Fsource%2Fbrowse%2Ftrunk%2Ffrontend%2Fcss%2Fjquery.autocomplete.css%3Fr%3D2&amp;followup=http%3A%2F%2Fcode.google.com%2Fp%2Fallforgood%2Fsource%2Fbrowse%2Ftrunk%2Ffrontend%2Fcss%2Fjquery.autocomplete.css%3Fr%3D2" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if IE 6]>
+<div style="text-align:center;">
+Support browsers that contribute to open source, try <a href="http://www.firefox.com">Firefox</a> or <a href="http://www.google.com/chrome">Google Chrome</a>.
+</div>
+<![endif]-->
+
+
+
+
+ <table style="padding:0px; margin: 20px 0px 0px 0px; width:100%" cellpadding="0" cellspacing="0">
+ <tr style="height: 58px;">
+ 
+ <td style="width: 55px; text-align:center;">
+ <a href="/p/allforgood/">
+ 
+ 
+ <img src="/p/allforgood/logo?cct=1266865671" alt="Logo">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname" style="margin: 0px 0px -3px 0px">
+ <a href="/p/allforgood/" style="text-decoration:none; color:#000">allforgood</a>
+ 
+ </div>
+ <div id="psum">
+ <i><a id="project_summary_link" href="/p/allforgood/" style="text-decoration:none; color:#000">All for Good</a></i>
+ </div>
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="">
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+
+ 
+<table id="mt" cellspacing="0" cellpadding="0" width="100%" border="0">
+ <tr>
+ <th onclick="if (!cancelBubble) _go('/p/allforgood/');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/allforgood/">Project&nbsp;Home</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/allforgood/downloads/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/allforgood/downloads/list">Downloads</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/allforgood/w/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/allforgood/w/list">Wiki</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/allforgood/issues/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/allforgood/issues/list">Issues</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/allforgood/source/checkout');">
+ <div class="tab active">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/allforgood/source/checkout">Source</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ <td width="100%">&nbsp;</td>
+ </tr>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td>
+ <div class="st2">
+ <div class="isf">
+ 
+ 
+ 
+ <span class="inst1"><a href="/p/allforgood/source/checkout">Checkout</a></span> |
+ <span class="inst2"><a href="/p/allforgood/source/browse/">Browse</a></span> |
+ <span class="inst3"><a href="/p/allforgood/source/list">Changes</a></span> |
+ 
+ <form action="http://www.google.com/codesearch" method="get" style="display:inline"
+ onsubmit="document.getElementById('codesearchq').value = document.getElementById('origq').value + ' package:http://allforgood\\.googlecode\\.com'">
+ <input type="hidden" name="q" id="codesearchq" value="">
+ <input maxlength="2048" size="38" id="origq" name="origq" value="" title="Google Code Search" style="font-size:92%">&nbsp;<input type="submit" value="Search Trunk" name="btnG" style="font-size:92%">
+ 
+ 
+ 
+ </form>
+ </div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ <td height="4" align="right" valign="top" class="bevel-right">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ </td>
+ </tr>
+</table>
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+
+
+<div id="maincol"
+ 
+>
+
+ 
+<!-- IE -->
+
+
+
+
+<div class="expand">
+
+
+<style type="text/css">
+ #file_flipper { display: inline; float: right; white-space: nowrap; }
+ #file_flipper.hidden { display: none; }
+ #file_flipper .pagelink { color: #0000CC; text-decoration: underline; }
+ #file_flipper #visiblefiles { padding-left: 0.5em; padding-right: 0.5em; }
+</style>
+<div id="nav_and_rev" class="heading">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner" id="bub">
+ <div class="bub-top">
+ <div class="pagination" style="margin-left: 2em">
+ <table cellpadding="0" cellspacing="0" class="flipper">
+ <tbody>
+ <tr>
+ 
+ <td><b>r2</b></td>
+ 
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ 
+ <div class="" style="vertical-align: top">
+ <div class="src_crumbs src_nav">
+ <strong class="src_nav">Source path:&nbsp;</strong>
+ <span id="crumb_root">
+ 
+ <a href="/p/allforgood/source/browse/?r=2">svn</a>/&nbsp;</span>
+ <span id="crumb_links" class="ifClosed"><a href="/p/allforgood/source/browse/trunk/?r=2">trunk</a><span class="sp">/&nbsp;</span><a href="/p/allforgood/source/browse/trunk/frontend/?r=2">frontend</a><span class="sp">/&nbsp;</span><a href="/p/allforgood/source/browse/trunk/frontend/css/?r=2">css</a><span class="sp">/&nbsp;</span>jquery.autocomplete.css</span>
+ 
+ 
+ </div>
+ 
+ </div>
+ <div style="clear:both"></div>
+ </div>
+ </div>
+</div>
+
+<style type="text/css">
+ 
+  tr.inline_comment {
+ background: #fff;
+ vertical-align: top;
+ }
+ div.draft, div.published {
+ padding: .3em;
+ border: 1px solid #999; 
+ margin-bottom: .1em;
+ font-family: arial, sans-serif;
+ max-width: 60em;
+ }
+ div.draft {
+ background: #ffa;
+ } 
+ div.published {
+ background: #e5ecf9;
+ }
+ div.published .body, div.draft .body {
+ padding: .5em .1em .1em .1em;
+ max-width: 60em;
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+ }
+ div.draft .actions {
+ margin-left: 1em;
+ font-size: 90%;
+ }
+ div.draft form {
+ padding: .5em .5em .5em 0;
+ }
+ div.draft textarea, div.published textarea {
+ width: 95%;
+ height: 10em;
+ font-family: arial, sans-serif;
+ margin-bottom: .5em;
+ }
+
+
+ 
+ .nocursor, .nocursor td, .cursor_hidden, .cursor_hidden td {
+ background-color: white;
+ height: 2px;
+ }
+ .cursor, .cursor td {
+ background-color: darkblue;
+ height: 2px;
+ display: '';
+ }
+
+</style>
+<div class="fc">
+ 
+ 
+ 
+<style type="text/css">
+.undermouse span { 
+ background-image: url(http://www.gstatic.com/codesite/ph/images/comments.gif); }
+</style>
+<table class="opened" id="review_comment_area" 
+><tr>
+<td id="nums">
+<pre><table width="100%"><tr class="nocursor"><td></td></tr></table></pre>
+
+<pre><table width="100%" id="nums_table_0"><tr id="gr_svn2_1"
+
+><td id="1"><a href="#1">1</a></td></tr
+><tr id="gr_svn2_2"
+
+><td id="2"><a href="#2">2</a></td></tr
+><tr id="gr_svn2_3"
+
+><td id="3"><a href="#3">3</a></td></tr
+><tr id="gr_svn2_4"
+
+><td id="4"><a href="#4">4</a></td></tr
+><tr id="gr_svn2_5"
+
+><td id="5"><a href="#5">5</a></td></tr
+><tr id="gr_svn2_6"
+
+><td id="6"><a href="#6">6</a></td></tr
+><tr id="gr_svn2_7"
+
+><td id="7"><a href="#7">7</a></td></tr
+><tr id="gr_svn2_8"
+
+><td id="8"><a href="#8">8</a></td></tr
+><tr id="gr_svn2_9"
+
+><td id="9"><a href="#9">9</a></td></tr
+><tr id="gr_svn2_10"
+
+><td id="10"><a href="#10">10</a></td></tr
+><tr id="gr_svn2_11"
+
+><td id="11"><a href="#11">11</a></td></tr
+><tr id="gr_svn2_12"
+
+><td id="12"><a href="#12">12</a></td></tr
+><tr id="gr_svn2_13"
+
+><td id="13"><a href="#13">13</a></td></tr
+><tr id="gr_svn2_14"
+
+><td id="14"><a href="#14">14</a></td></tr
+><tr id="gr_svn2_15"
+
+><td id="15"><a href="#15">15</a></td></tr
+><tr id="gr_svn2_16"
+
+><td id="16"><a href="#16">16</a></td></tr
+><tr id="gr_svn2_17"
+
+><td id="17"><a href="#17">17</a></td></tr
+><tr id="gr_svn2_18"
+
+><td id="18"><a href="#18">18</a></td></tr
+><tr id="gr_svn2_19"
+
+><td id="19"><a href="#19">19</a></td></tr
+><tr id="gr_svn2_20"
+
+><td id="20"><a href="#20">20</a></td></tr
+><tr id="gr_svn2_21"
+
+><td id="21"><a href="#21">21</a></td></tr
+><tr id="gr_svn2_22"
+
+><td id="22"><a href="#22">22</a></td></tr
+><tr id="gr_svn2_23"
+
+><td id="23"><a href="#23">23</a></td></tr
+><tr id="gr_svn2_24"
+
+><td id="24"><a href="#24">24</a></td></tr
+><tr id="gr_svn2_25"
+
+><td id="25"><a href="#25">25</a></td></tr
+><tr id="gr_svn2_26"
+
+><td id="26"><a href="#26">26</a></td></tr
+><tr id="gr_svn2_27"
+
+><td id="27"><a href="#27">27</a></td></tr
+><tr id="gr_svn2_28"
+
+><td id="28"><a href="#28">28</a></td></tr
+><tr id="gr_svn2_29"
+
+><td id="29"><a href="#29">29</a></td></tr
+><tr id="gr_svn2_30"
+
+><td id="30"><a href="#30">30</a></td></tr
+><tr id="gr_svn2_31"
+
+><td id="31"><a href="#31">31</a></td></tr
+><tr id="gr_svn2_32"
+
+><td id="32"><a href="#32">32</a></td></tr
+><tr id="gr_svn2_33"
+
+><td id="33"><a href="#33">33</a></td></tr
+><tr id="gr_svn2_34"
+
+><td id="34"><a href="#34">34</a></td></tr
+><tr id="gr_svn2_35"
+
+><td id="35"><a href="#35">35</a></td></tr
+><tr id="gr_svn2_36"
+
+><td id="36"><a href="#36">36</a></td></tr
+><tr id="gr_svn2_37"
+
+><td id="37"><a href="#37">37</a></td></tr
+><tr id="gr_svn2_38"
+
+><td id="38"><a href="#38">38</a></td></tr
+><tr id="gr_svn2_39"
+
+><td id="39"><a href="#39">39</a></td></tr
+><tr id="gr_svn2_40"
+
+><td id="40"><a href="#40">40</a></td></tr
+><tr id="gr_svn2_41"
+
+><td id="41"><a href="#41">41</a></td></tr
+><tr id="gr_svn2_42"
+
+><td id="42"><a href="#42">42</a></td></tr
+><tr id="gr_svn2_43"
+
+><td id="43"><a href="#43">43</a></td></tr
+><tr id="gr_svn2_44"
+
+><td id="44"><a href="#44">44</a></td></tr
+><tr id="gr_svn2_45"
+
+><td id="45"><a href="#45">45</a></td></tr
+><tr id="gr_svn2_46"
+
+><td id="46"><a href="#46">46</a></td></tr
+><tr id="gr_svn2_47"
+
+><td id="47"><a href="#47">47</a></td></tr
+></table></pre>
+
+<pre><table width="100%"><tr class="nocursor"><td></td></tr></table></pre>
+</td>
+<td id="lines">
+<pre class="prettyprint"><table width="100%"><tr class="cursor_stop cursor_hidden"><td></td></tr></table></pre>
+
+<pre class="prettyprint lang-css"><table id="src_table_0"><tr
+id=sl_svn2_1
+
+><td class="source">/* from: http://www.pengoworks.com/workshop/jquery/autocomplete.htm */<br></td></tr
+><tr
+id=sl_svn2_2
+
+><td class="source">.ac_results {<br></td></tr
+><tr
+id=sl_svn2_3
+
+><td class="source">	padding: 0px;<br></td></tr
+><tr
+id=sl_svn2_4
+
+><td class="source">	border: 1px solid WindowFrame;<br></td></tr
+><tr
+id=sl_svn2_5
+
+><td class="source">	background-color: Window;<br></td></tr
+><tr
+id=sl_svn2_6
+
+><td class="source">	overflow: hidden;<br></td></tr
+><tr
+id=sl_svn2_7
+
+><td class="source">}<br></td></tr
+><tr
+id=sl_svn2_8
+
+><td class="source"><br></td></tr
+><tr
+id=sl_svn2_9
+
+><td class="source">.ac_results ul {<br></td></tr
+><tr
+id=sl_svn2_10
+
+><td class="source">	width: 100%;<br></td></tr
+><tr
+id=sl_svn2_11
+
+><td class="source">	list-style-position: outside;<br></td></tr
+><tr
+id=sl_svn2_12
+
+><td class="source">	list-style: none;<br></td></tr
+><tr
+id=sl_svn2_13
+
+><td class="source">	padding: 0;<br></td></tr
+><tr
+id=sl_svn2_14
+
+><td class="source">	margin: 0;<br></td></tr
+><tr
+id=sl_svn2_15
+
+><td class="source">}<br></td></tr
+><tr
+id=sl_svn2_16
+
+><td class="source"><br></td></tr
+><tr
+id=sl_svn2_17
+
+><td class="source">.ac_results iframe {<br></td></tr
+><tr
+id=sl_svn2_18
+
+><td class="source">	display:none;/*sorry for IE5*/<br></td></tr
+><tr
+id=sl_svn2_19
+
+><td class="source">	display/**/:block;/*sorry for IE5*/<br></td></tr
+><tr
+id=sl_svn2_20
+
+><td class="source">	position:absolute;<br></td></tr
+><tr
+id=sl_svn2_21
+
+><td class="source">	top:0;<br></td></tr
+><tr
+id=sl_svn2_22
+
+><td class="source">	left:0;<br></td></tr
+><tr
+id=sl_svn2_23
+
+><td class="source">	z-index:-1;<br></td></tr
+><tr
+id=sl_svn2_24
+
+><td class="source">	filter:mask();<br></td></tr
+><tr
+id=sl_svn2_25
+
+><td class="source">	width:3000px;<br></td></tr
+><tr
+id=sl_svn2_26
+
+><td class="source">	height:3000px;<br></td></tr
+><tr
+id=sl_svn2_27
+
+><td class="source">}<br></td></tr
+><tr
+id=sl_svn2_28
+
+><td class="source"><br></td></tr
+><tr
+id=sl_svn2_29
+
+><td class="source">.ac_results li {<br></td></tr
+><tr
+id=sl_svn2_30
+
+><td class="source">	margin: 0px;<br></td></tr
+><tr
+id=sl_svn2_31
+
+><td class="source">	padding: 2px 5px;<br></td></tr
+><tr
+id=sl_svn2_32
+
+><td class="source">	cursor: pointer;<br></td></tr
+><tr
+id=sl_svn2_33
+
+><td class="source">	display: block;<br></td></tr
+><tr
+id=sl_svn2_34
+
+><td class="source">	width: 100%;<br></td></tr
+><tr
+id=sl_svn2_35
+
+><td class="source">	font: menu;<br></td></tr
+><tr
+id=sl_svn2_36
+
+><td class="source">	font-size: 12px;<br></td></tr
+><tr
+id=sl_svn2_37
+
+><td class="source">	overflow: hidden;<br></td></tr
+><tr
+id=sl_svn2_38
+
+><td class="source">}<br></td></tr
+><tr
+id=sl_svn2_39
+
+><td class="source"><br></td></tr
+><tr
+id=sl_svn2_40
+
+><td class="source">.ac_loading {<br></td></tr
+><tr
+id=sl_svn2_41
+
+><td class="source">	background : Window url(&#39;/zx0000/images/indicator.gif&#39;) right center no-repeat;<br></td></tr
+><tr
+id=sl_svn2_42
+
+><td class="source">}<br></td></tr
+><tr
+id=sl_svn2_43
+
+><td class="source"><br></td></tr
+><tr
+id=sl_svn2_44
+
+><td class="source">.ac_over {<br></td></tr
+><tr
+id=sl_svn2_45
+
+><td class="source">	background-color: Highlight;<br></td></tr
+><tr
+id=sl_svn2_46
+
+><td class="source">	color: HighlightText;<br></td></tr
+><tr
+id=sl_svn2_47
+
+><td class="source">}<br></td></tr
+></table></pre>
+
+<pre class="prettyprint"><table width="100%"><tr class="cursor_stop cursor_hidden"><td></td></tr></table></pre>
+</td>
+</tr></table>
+<script type="text/javascript">
+ var lineNumUnderMouse = -1;
+ 
+ function gutterOver(num) {
+ gutterOut();
+ var newTR = document.getElementById('gr_svn2_' + num);
+ if (newTR) {
+ newTR.className = 'undermouse';
+ }
+ lineNumUnderMouse = num;
+ }
+ function gutterOut() {
+ if (lineNumUnderMouse != -1) {
+ var oldTR = document.getElementById(
+ 'gr_svn2_' + lineNumUnderMouse);
+ if (oldTR) {
+ oldTR.className = '';
+ }
+ lineNumUnderMouse = -1;
+ }
+ }
+ var numsGenState = {table_base_id: 'nums_table_'};
+ var srcGenState = {table_base_id: 'src_table_'};
+ var alignerRunning = false;
+ var startOver = false;
+ function setLineNumberHeights() {
+ if (alignerRunning) {
+ startOver = true;
+ return;
+ }
+ numsGenState.chunk_id = 0;
+ numsGenState.table = document.getElementById('nums_table_0');
+ numsGenState.row_num = 0;
+ srcGenState.chunk_id = 0;
+ srcGenState.table = document.getElementById('src_table_0');
+ srcGenState.row_num = 0;
+ alignerRunning = true;
+ continueToSetLineNumberHeights();
+ }
+ function rowGenerator(genState) {
+ if (genState.row_num < genState.table.rows.length) {
+ var currentRow = genState.table.rows[genState.row_num];
+ genState.row_num++;
+ return currentRow;
+ }
+ var newTable = document.getElementById(
+ genState.table_base_id + (genState.chunk_id + 1));
+ if (newTable) {
+ genState.chunk_id++;
+ genState.row_num = 0;
+ genState.table = newTable;
+ return genState.table.rows[0];
+ }
+ return null;
+ }
+ var MAX_ROWS_PER_PASS = 1000;
+ function continueToSetLineNumberHeights() {
+ var rowsInThisPass = 0;
+ var numRow = 1;
+ var srcRow = 1;
+ while (numRow && srcRow && rowsInThisPass < MAX_ROWS_PER_PASS) {
+ numRow = rowGenerator(numsGenState);
+ srcRow = rowGenerator(srcGenState);
+ rowsInThisPass++;
+ if (numRow && srcRow) {
+ if (numRow.offsetHeight != srcRow.offsetHeight) {
+ numRow.firstChild.style.height = srcRow.offsetHeight + 'px';
+ }
+ }
+ }
+ if (rowsInThisPass >= MAX_ROWS_PER_PASS) {
+ setTimeout(continueToSetLineNumberHeights, 10);
+ } else {
+ alignerRunning = false;
+ if (startOver) {
+ startOver = false;
+ setTimeout(setLineNumberHeights, 500);
+ }
+ }
+ }
+ // Do 2 complete passes, because there can be races
+ // between this code and prettify.
+ startOver = true;
+ setTimeout(setLineNumberHeights, 250);
+ window.onresize = setLineNumberHeights;
+</script>
+
+ 
+ 
+ <div id="log">
+ <div style="text-align:right">
+ <a class="ifCollapse" href="#" onclick="_toggleMeta('', 'p', 'allforgood', this)">Show details</a>
+ <a class="ifExpand" href="#" onclick="_toggleMeta('', 'p', 'allforgood', this)">Hide details</a>
+ </div>
+ <div class="ifExpand">
+ 
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="changelog">
+ <p>Change log</p>
+ <div>
+ <a href="/p/allforgood/source/detail?spec=svn2&r=2">r2</a>
+ by daniel.berlin
+ on Jul 09, 2009
+ &nbsp; <a href="/p/allforgood/source/diff?spec=svn2&r=2&amp;format=side&amp;path=/trunk/frontend/css/jquery.autocomplete.css&amp;old_path=/trunk/frontend/css/jquery.autocomplete.css&amp;old=">Diff</a>
+ </div>
+ <pre>Here we go
+</pre>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ var detail_url = '/p/allforgood/source/detail?r=2&spec=svn2';
+ var publish_url = '/p/allforgood/source/detail?r=2&spec=svn2#publish';
+ // describe the paths of this revision in javascript.
+ var changed_paths = [];
+ var changed_urls = [];
+ 
+ changed_paths.push('/trunk/backup.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/backup.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/codereview_upload.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/codereview_upload.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/README');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/README?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/craigslist-metro-latlongs.txt');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/craigslist-metro-latlongs.txt?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/craigslist-metros.txt');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/craigslist-metros.txt?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/crawl_craigslist.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/crawl_craigslist.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/crawl_usaservice.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/crawl_usaservice.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/__init__.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/__init__.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/easter.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/easter.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/parser.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/parser.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/relativedelta.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/relativedelta.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/rrule.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/rrule.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/tz.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/tz.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/tzwin.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/tzwin.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/zoneinfo');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/zoneinfo?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/zoneinfo/__init__.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/zoneinfo/__init__.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/dateutil/zoneinfo/zoneinfo-2008e.tar.gz');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/dateutil/zoneinfo/zoneinfo-2008e.tar.gz?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/footprint_lib.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/footprint_lib.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/geocode_cache.txt');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/geocode_cache.txt?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/geocoder.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/geocoder.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/load_gbase.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/load_gbase.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/parse_craigslist.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/parse_craigslist.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/parse_footprint.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/parse_footprint.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/parse_gspreadsheet.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/parse_gspreadsheet.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/parse_idealist.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/parse_idealist.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/parse_networkforgood.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/parse_networkforgood.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/parse_usaservice.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/parse_usaservice.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/parse_volunteermatch.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/parse_volunteermatch.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/read_basetsv.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/read_basetsv.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/datahub/xml_helpers.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/datahub/xml_helpers.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/etc');
+ changed_urls.push('/p/allforgood/source/browse/trunk/etc?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/etc/set_svn_properties.sh');
+ changed_urls.push('/p/allforgood/source/browse/trunk/etc/set_svn_properties.sh?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/etc/svn-ignores');
+ changed_urls.push('/p/allforgood/source/browse/trunk/etc/svn-ignores?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/api.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/api.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/app.yaml');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/app.yaml?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/autocomplete');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/autocomplete?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/autocomplete/__init__.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/autocomplete/__init__.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/autocomplete/main.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/autocomplete/main.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/autocomplete/popular_words.txt');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/autocomplete/popular_words.txt?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/base_search.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/base_search.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/blank.html');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/blank.html?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/config.py');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/config.py?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/cron.yaml');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/cron.yaml?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/css');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/css?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/css/homepage.css');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/css/homepage.css?r=2&spec=svn2');
+ 
+ 
+ changed_paths.push('/trunk/frontend/css/jquery.autocomplete.css');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/css/jquery.autocomplete.css?r=2&spec=svn2');
+ 
+ var selected_path = '/trunk/frontend/css/jquery.autocomplete.css';
+ 
+ 
+ changed_paths.push('/trunk/frontend/css/main.css');
+ changed_urls.push('/p/allforgood/source/browse/trunk/frontend/css/main.css?r=2&spec=svn2');
+ 
+ 
+ function getCurrentPageIndex() {
+ for (var i = 0; i < changed_paths.length; i++) {
+ if (selected_path == changed_paths[i]) {
+ return i;
+ }
+ }
+ }
+ function getNextPage() {
+ var i = getCurrentPageIndex();
+ if (i < changed_paths.length - 1) {
+ return changed_urls[i + 1];
+ }
+ return null;
+ }
+ function getPreviousPage() {
+ var i = getCurrentPageIndex();
+ if (i > 0) {
+ return changed_urls[i - 1];
+ }
+ return null;
+ }
+ function gotoNextPage() {
+ var page = getNextPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoPreviousPage() {
+ var page = getPreviousPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoDetailPage() {
+ window.location = detail_url;
+ }
+ function gotoPublishPage() {
+ window.location = publish_url;
+ }
+</script>
+ 
+ <style type="text/css">
+ #review_nav {
+ border-top: 3px solid white;
+ padding-top: 6px;
+ margin-top: 1em;
+ }
+ #review_nav td {
+ vertical-align: middle;
+ }
+ #review_nav select {
+ margin: .5em 0;
+ }
+ </style>
+ <div id="review_nav">
+ <table><tr><td>Go to:&nbsp;</td><td>
+ <select name="files_in_rev" onchange="window.location=this.value">
+ 
+ <option value="/p/allforgood/source/browse/trunk/backup.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/backup.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/codereview_upload.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/codereview_upload.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/README?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/README</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/craigslist-metro-latlongs.txt?r=2&amp;spec=svn2"
+ 
+ >...ub/craigslist-metro-latlongs.txt</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/craigslist-metros.txt?r=2&amp;spec=svn2"
+ 
+ >...nk/datahub/craigslist-metros.txt</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/crawl_craigslist.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/crawl_craigslist.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/crawl_usaservice.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/crawl_usaservice.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/dateutil</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/__init__.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/dateutil/__init__.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/easter.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/dateutil/easter.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/parser.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/dateutil/parser.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/relativedelta.py?r=2&amp;spec=svn2"
+ 
+ >...atahub/dateutil/relativedelta.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/rrule.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/dateutil/rrule.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/tz.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/dateutil/tz.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/tzwin.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/dateutil/tzwin.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/zoneinfo?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/dateutil/zoneinfo</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/zoneinfo/__init__.py?r=2&amp;spec=svn2"
+ 
+ >...ub/dateutil/zoneinfo/__init__.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/dateutil/zoneinfo/zoneinfo-2008e.tar.gz?r=2&amp;spec=svn2"
+ 
+ >...l/zoneinfo/zoneinfo-2008e.tar.gz</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/footprint_lib.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/footprint_lib.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/geocode_cache.txt?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/geocode_cache.txt</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/geocoder.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/geocoder.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/load_gbase.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/load_gbase.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/parse_craigslist.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/parse_craigslist.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/parse_footprint.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/parse_footprint.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/parse_gspreadsheet.py?r=2&amp;spec=svn2"
+ 
+ >...nk/datahub/parse_gspreadsheet.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/parse_idealist.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/parse_idealist.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/parse_networkforgood.py?r=2&amp;spec=svn2"
+ 
+ >.../datahub/parse_networkforgood.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/parse_usaservice.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/parse_usaservice.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/parse_volunteermatch.py?r=2&amp;spec=svn2"
+ 
+ >.../datahub/parse_volunteermatch.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/read_basetsv.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/read_basetsv.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/datahub/xml_helpers.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/datahub/xml_helpers.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/etc?r=2&amp;spec=svn2"
+ 
+ >/trunk/etc</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/etc/set_svn_properties.sh?r=2&amp;spec=svn2"
+ 
+ >/trunk/etc/set_svn_properties.sh</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/etc/svn-ignores?r=2&amp;spec=svn2"
+ 
+ >/trunk/etc/svn-ignores</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/api.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/api.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/app.yaml?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/app.yaml</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/autocomplete?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/autocomplete</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/autocomplete/__init__.py?r=2&amp;spec=svn2"
+ 
+ >...rontend/autocomplete/__init__.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/autocomplete/main.py?r=2&amp;spec=svn2"
+ 
+ >...nk/frontend/autocomplete/main.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/autocomplete/popular_words.txt?r=2&amp;spec=svn2"
+ 
+ >...d/autocomplete/popular_words.txt</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/base_search.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/base_search.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/blank.html?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/blank.html</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/config.py?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/config.py</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/cron.yaml?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/cron.yaml</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/css?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/css</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/css/homepage.css?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/css/homepage.css</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/css/jquery.autocomplete.css?r=2&amp;spec=svn2"
+ selected="selected"
+ >...tend/css/jquery.autocomplete.css</option>
+ 
+ <option value="/p/allforgood/source/browse/trunk/frontend/css/main.css?r=2&amp;spec=svn2"
+ 
+ >/trunk/frontend/css/main.css</option>
+ 
+ </select>
+ </td></tr></table>
+ 
+ 
+ 
+
+
+
+ <div style="white-space:nowrap">
+ Project members,
+ <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=http%3A%2F%2Fcode.google.com%2Fp%2Fallforgood%2Fsource%2Fbrowse%2Ftrunk%2Ffrontend%2Fcss%2Fjquery.autocomplete.css%3Fr%3D2&amp;followup=http%3A%2F%2Fcode.google.com%2Fp%2Fallforgood%2Fsource%2Fbrowse%2Ftrunk%2Ffrontend%2Fcss%2Fjquery.autocomplete.css%3Fr%3D2"
+ >sign in</a> to write a code review</div>
+
+
+ 
+ </div>
+ 
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="older_bubble">
+ <p>Older revisions</p>
+ 
+ <a href="/p/allforgood/source/list?path=/trunk/frontend/css/jquery.autocomplete.css&start=2">All revisions of this file</a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="fileinfo_bubble">
+ <p>File info</p>
+ 
+ <div>Size: 843 bytes,
+ 47 lines</div>
+ 
+ <div><a href="http://allforgood.googlecode.com/svn-history/r2/trunk/frontend/css/jquery.autocomplete.css">View raw file</a></div>
+ </div>
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ </div>
+
+
+</div>
+</div>
+
+ <script src="http://www.gstatic.com/codesite/ph/8653308036866339325/js/prettify/prettify.js"></script>
+
+ <script src="http://www.gstatic.com/codesite/ph/8653308036866339325/js/prettify/lang-css.js"></script>
+
+<script type="text/javascript">prettyPrint();</script>
+
+<script src="http://www.gstatic.com/codesite/ph/8653308036866339325/js/source_file_scripts.js"></script>
+
+ <script type="text/javascript" src="http://kibbles.googlecode.com/files/kibbles-1.3.1.comp.js"></script>
+ <script type="text/javascript">
+ var lastStop = null;
+ var initilized = false;
+ 
+ function updateCursor(next, prev) {
+ if (prev && prev.element) {
+ prev.element.className = 'cursor_stop cursor_hidden';
+ }
+ if (next && next.element) {
+ next.element.className = 'cursor_stop cursor';
+ lastStop = next.index;
+ }
+ }
+ 
+ function pubRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftDestroyed(data) {
+ updateCursorForCell(data.cellId, 'nocursor');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ function reloadCursors() {
+ kibbles.skipper.reset();
+ loadCursors();
+ if (lastStop != null) {
+ kibbles.skipper.setCurrentStop(lastStop);
+ }
+ }
+ // possibly the simplest way to insert any newly added comments
+ // is to update the class of the corresponding cursor row,
+ // then refresh the entire list of rows.
+ function updateCursorForCell(cellId, className) {
+ var cell = document.getElementById(cellId);
+ // we have to go two rows back to find the cursor location
+ var row = getPreviousElement(cell.parentNode);
+ row.className = className;
+ }
+ // returns the previous element, ignores text nodes.
+ function getPreviousElement(e) {
+ var element = e.previousSibling;
+ if (element.nodeType == 3) {
+ element = element.previousSibling;
+ }
+ if (element && element.tagName) {
+ return element;
+ }
+ }
+ function loadCursors() {
+ // register our elements with skipper
+ var elements = CR_getElements('*', 'cursor_stop');
+ var len = elements.length;
+ for (var i = 0; i < len; i++) {
+ var element = elements[i]; 
+ element.className = 'cursor_stop cursor_hidden';
+ kibbles.skipper.append(element);
+ }
+ }
+ function toggleComments() {
+ CR_toggleCommentDisplay();
+ reloadCursors();
+ }
+ function keysOnLoadHandler() {
+ // setup skipper
+ kibbles.skipper.addStopListener(
+ kibbles.skipper.LISTENER_TYPE.PRE, updateCursor);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_top', 50);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_bottom', 100);
+ // Register our keys
+ kibbles.skipper.addFwdKey("n");
+ kibbles.skipper.addRevKey("p");
+ kibbles.keys.addKeyPressListener(
+ 'u', function() { window.location = detail_url; });
+ kibbles.keys.addKeyPressListener(
+ 'r', function() { window.location = detail_url + '#publish'; });
+ 
+ kibbles.keys.addKeyPressListener('j', gotoNextPage);
+ kibbles.keys.addKeyPressListener('k', gotoPreviousPage);
+ 
+ 
+ }
+ window.onload = function() {keysOnLoadHandler();};
+ </script>
+
+<!-- code review support -->
+<script src="http://www.gstatic.com/codesite/ph/8653308036866339325/js/code_review_scripts.js"></script>
+<script type="text/javascript">
+ 
+ // the comment form template
+ var form = '<div class="draft"><div class="header"><span class="title">Draft comment:</span></div>' +
+ '<div class="body"><form onsubmit="return false;"><textarea id="$ID">$BODY</textarea><br>$ACTIONS</form></div>' +
+ '</div>';
+ // the comment "plate" template used for both draft and published comment "plates".
+ var draft_comment = '<div class="draft" ondblclick="$ONDBLCLICK">' +
+ '<div class="header"><span class="title">Draft comment:</span><span class="actions">$ACTIONS</span></div>' +
+ '<pre id="$ID" class="body">$BODY</pre>' +
+ '</div>';
+ var published_comment = '<div class="published">' +
+ '<div class="header"><span class="title"><a href="$PROFILE_URL">$AUTHOR:</a></span><div>' +
+ '<pre id="$ID" class="body">$BODY</pre>' +
+ '</div>';
+
+ function showPublishInstructions() {
+ var element = document.getElementById('review_instr');
+ if (element) {
+ element.className = 'opened';
+ }
+ }
+ function revsOnLoadHandler() {
+ // register our source container with the commenting code
+ var paths = {'svn2': '/trunk/frontend/css/jquery.autocomplete.css'}
+ CR_setup('', 'p', 'allforgood', '', 'svn2', paths,
+ '', CR_BrowseIntegrationFactory);
+ // register our hidden ui elements with the code commenting code ui builder.
+ CR_registerLayoutElement('form', form);
+ CR_registerLayoutElement('draft_comment', draft_comment);
+ CR_registerLayoutElement('published_comment', published_comment);
+ 
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_DRAFT_PLATE, showPublishInstructions);
+ 
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_PUB_PLATE, pubRevealed);
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_DRAFT_PLATE, draftRevealed);
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.DISCARD_DRAFT_COMMENT, draftDestroyed);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ var initilized = true;
+ reloadCursors();
+ }
+ window.onload = function() {keysOnLoadHandler(); revsOnLoadHandler();};
+</script>
+<script type="text/javascript" src="http://www.gstatic.com/codesite/ph/8653308036866339325/js/dit_scripts.js"></script>
+
+ 
+ 
+ <script type="text/javascript" src="http://www.gstatic.com/codesite/ph/8653308036866339325/js/core_scripts_20081103.js"></script>
+ <script type="text/javascript" src="/js/codesite_product_dictionary_ph.pack.04102009.js"></script>
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ &copy;2010 Google -
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ 
+ </div>
+</div>
+
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ </body>
+</html>
+

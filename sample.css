@@ -1,0 +1,86 @@
+﻿/*
+You can use this file as is or as a starting point for you own styling
+*/
+/*
+pre code[class]:after {
+  content: 'highlight: ' attr(class);
+  display: block; text-align: right;
+  font-size: smaller;
+  color: #CCC; background: white;
+  border-top: solid 1px;
+  padding-top: 0.5em;
+}*/
+
+pre
+{	display: block;
+	margin: 5px 0 20px 0;
+	padding: 0;
+	width: 100%;
+	border: 1px solid #C6C7B7;
+	overflow: auto;
+	overflow-x: scroll;
+	background: #FBFCF6;}
+
+pre code 
+{	display: block;
+	margin: 0;
+	padding: 10px;
+	overflow:visible;
+	font: 11px lucida console, courier}
+	
+
+pre code, 
+.ruby .subst {
+  color: black;
+}
+
+.string,
+.function .title,
+.class .title, 
+.tag .attribute .value,
+.css .rules .value,
+.preprocessor,
+.ruby .symbol,
+.built_in,
+.sql .aggregate,
+.django .template_tag,
+.django .variable,
+.smalltalk .class {
+  color: #A0560D;
+}
+
+.comment,
+.java .annotation,
+.template_comment {
+  color: #888;
+}
+
+.number,
+.regexp,
+.javascript .literal,
+.smalltalk .symbol,
+.smalltalk .char {
+  color: #080;
+}
+
+.javadoc,
+.ruby .string,
+.python .decorator,
+.django .filter .argument,
+.smalltalk .localvars,
+.smalltalk .array {
+  color: #88F;
+}
+
+.keyword,
+.css .id,
+.phpdoc,
+.function .title,
+.class .title,
+.vbscript .built_in,
+.sql .aggregate,
+.rsl .built_in,
+.smalltalk .class {
+  font-weight: bold;
+  color: #3659A4;
+}

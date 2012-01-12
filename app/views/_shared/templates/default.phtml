@@ -1,0 +1,86 @@
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title>Khipus - Markisich Soluciones Informaticas </title>
+
+    <?php echo Tag::css("khipu/style") ?>
+    <?php // echo Tag::css('bienvenida') ?>
+    <?php // echo Tag::css('style') ?>
+    <?php echo Tag::css('themes/ui-lightness/jquery.ui.all')?>
+    <?php echo Html::includeCss() ?>
+    <?php echo Tag::js('jquery/jquery-1.4.2'); ?>
+
+
+
+    <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
+</head>
+<body>
+ 
+    <div id="page-background-gradient"></div>
+    <div id="page-background-glare">
+        <div id="page-background-glare-image"></div>
+    </div>
+    <div id="main">
+        <div class="Sheet">
+            <div class="Sheet-tl"></div>
+            <div class="Sheet-tr"></div>
+            <div class="Sheet-bl"></div>
+            <div class="Sheet-br"></div>
+            <div class="Sheet-tc"></div>
+            <div class="Sheet-bc"></div>
+            <div class="Sheet-cl"></div>
+            <div class="Sheet-cr"></div>
+            <div class="Sheet-cc"></div>
+            <div class="Sheet-body">
+                <div class="Header">
+                    <div class="Header-png"></div>
+                    <div class="Header-jpeg"></div>
+                    <div class="Logo">
+                        <h1 id="name-text" class="Logo-name"><a href="#">KIPUS</a></h1>
+                        <div id="slogan-text" class="Logo-text">super</div>
+                    </div>
+                </div>
+                <div class="nav">
+                	<div class="l"></div>
+                	<div class="r"></div>
+                	<ul class="menu">
+				<li><a href='/personas'>
+		<span class='l'></span><span class='r'></span>
+		<span class='t'> Personas </a></span> </li>
+                	</ul>
+                </div>
+		
+                    <div class="content">
+
+                        <div class="Post">
+                            <div class="Post-body">
+                        <div class="Post-inner" >
+                        </div>
+                                        <?php View::content(); ?>
+				
+                        		<div class="cleared"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cleared"></div><div class="Footer">
+                    <div class="Footer-inner">
+                        <a href="#" class="rss-tag-icon" title="RSS"></a>
+                        <div class="Footer-text">
+                            <p> <?php View::partial('kumbia/footer') ?></p>
+                        </div>
+                    </div>
+                    <div class="Footer-background"></div>
+                </div>
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="page-footer"><a href="http://www.markisich.com/">Markisich</p>
+    </div>
+    
+</body>
+</html>
